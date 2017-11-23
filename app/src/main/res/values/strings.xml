@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Campus Positioning System</string>
+    <string name="libraries_centres">Libraries</string>
+    <string name="action_normal">Normal</string>
+    <string name="action_satellite">Satellite</string>
+    <string name="action_terrain">Terrain</string>
+    <string name="action_hybrid">Hybrid</string>
+    <string name="google_maps_key">AIzaSyCBQIBbNGWqNYbjWIaWsTiuEaGqkfQVMb0</string>
+</resources>

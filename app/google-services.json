@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "329683267029",
+    "firebase_url": "https://finalproject-b2fdd.firebaseio.com",
+    "project_id": "finalproject-b2fdd",
+    "storage_bucket": "finalproject-b2fdd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329683267029:android:646b5c1b01711747",
+        "android_client_info": {
+          "package_name": "com.itechhub.datawizards.campuspositioningsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "329683267029-a7or8i1f99vkb5rfftuf0me77qnm6nqk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.itechhub.datawizards.campuspositioningsystem",
+            "certificate_hash": "61e02bc8d0ace4369406e4f81d2b27065bbf1ebe"
+          }
+        },
+        {
+          "client_id": "329683267029-3lt6824fe0262jplqdfc08tehr7kko93.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpH7yICqM_lkVtVBJbSXy_vsyb44C0XLc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "329683267029-3lt6824fe0262jplqdfc08tehr7kko93.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
