@@ -112,20 +112,20 @@ public class ActivityMap extends FragmentActivity implements OnMapReadyCallback,
 
         Button btnLibrary = findViewById(R.id.btnLibraries);
         btnLibrary.setOnClickListener(new View.OnClickListener() {
-            String ShoppingCentres = "shopping_mall";
+            String Libraries = "library";
 
             @Override
             public void onClick(View v) {
                 Log.d("onClick", "Button is Clicked");
                 mMap.clear();
-                String url = getUrl(latitude, longitude, ShoppingCentres);
+                String url = getUrl(latitude, longitude, Libraries);
                 Object[] DataTransfer = new Object[2];
                 DataTransfer[0] = mMap;
                 DataTransfer[1] = url;
                 Log.d("onClick", url);
                 GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
                 getNearbyPlacesData.execute(DataTransfer);
-                Toast.makeText(getApplicationContext(), "Nearby ShoppingCentres", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Nearby Libraries", Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -161,7 +161,7 @@ public class ActivityMap extends FragmentActivity implements OnMapReadyCallback,
         googlePlacesUrl.append("&radius=").append(PROXIMITY_RADIUS);
         googlePlacesUrl.append("&type=").append(nearbyPlace);
         googlePlacesUrl.append("&sensor=true");
-        googlePlacesUrl.append("&key=" + "AIzaSyATuUiZUkEc_UgHuqsBJa1oqaODI-3mLs0");
+        googlePlacesUrl.append("&key=" + "AIzaSyBBVvDWuCZVJAf4X9VSc9a_sQm01kjE3aA");
         Log.d("getUrl", googlePlacesUrl.toString());
         return (googlePlacesUrl.toString());
     }
@@ -192,11 +192,11 @@ public class ActivityMap extends FragmentActivity implements OnMapReadyCallback,
         mCurrLocationMarker = mMap.addMarker(markerOptions);
 
         //move map camera
-        CameraUpdate camera = CameraUpdateFactory.newLatLngZoom(latLng, 11);
-        mMap.animateCamera(camera);
+//        CameraUpdate camera = CameraUpdateFactory.newLatLngZoom(latLng, 11);
+//        mMap.animateCamera(camera);
 
-//        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-//        mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
         Toast.makeText(getApplicationContext(), "Your Current Location", Toast.LENGTH_LONG).show();
 
         Log.d("onLocationChanged", String.format("latitude:%.3f longitude:%.3f", latitude, longitude));
@@ -310,7 +310,6 @@ public class ActivityMap extends FragmentActivity implements OnMapReadyCallback,
             mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 }
